@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" stylesheets="@../../../styles/styleMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatiebancara1.MenuController">
+   <children>
+      <Text id="balanta" layoutX="174.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bani multi frate" textAlignment="CENTER" wrappingWidth="153.134765625" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="174.0">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
+      <Button fx:id="menu" layoutX="340.0" layoutY="-5.0" mnemonicParsing="false" onAction="#toggleVBox" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Menu" textFill="WHITE" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-5.0" />
+
+      <Button id="butonIstoric" layoutX="93.0" layoutY="238.0" mnemonicParsing="false" onAction="#onIstoricClick" prefHeight="25.0" prefWidth="302.0" text="Istoric Tranzactii" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="106.0" />
+      <Line endX="486.0" layoutX="14.0" layoutY="298.0" startX="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
+      <Text layoutX="19.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="19.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="19.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="19.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+
+      <Button id="butonDepunere" fx:id="butonDepune" layoutX="204.0" layoutY="142.0" mnemonicParsing="false" onAction="#onRetragereClick" prefHeight="57.0" prefWidth="79.0" text="Depunere" textAlignment="CENTER" />
+      <Button id="butonRetragere" fx:id="butonRetrage" layoutX="341.0" layoutY="142.0" mnemonicParsing="false" onAction="#onRetragereClick" prefHeight="57.0" prefWidth="79.0" text="Retragere" textAlignment="CENTER" />
+      <Button id="hello" alignment="CENTER" ellipsisString="" layoutX="-5.0" layoutY="-6.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="346.0" style="-fx-background-color: #000066;" styleClass="button_style" text="                                             Buna, barosane!" textFill="WHITE" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="-6.0" />
+      <Button id="butonDepunere" fx:id="butonTrimite" layoutX="67.0" layoutY="142.0" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="57.0" prefWidth="79.0" text="Trimite" textAlignment="CENTER" />
+      <Pane fx:id="interfata" layoutY="188.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="324.0" prefWidth="501.0" style="-fx-background-color: #404040;" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="188.0">
+         <children>
+            <Button fx:id="trimitereCLose" layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#onTrimiteCLose" text="Close" textFill="RED" />
+            <TextField alignment="TOP_CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="68.0" promptText="Ammount" />
+            <Button layoutX="200.0" layoutY="205.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="102.0" text="Trimite">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <TextField alignment="CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="129.0" promptText="To user" />
+         </children>
+      </Pane>
+      <Button fx:id="logOut" alignment="CENTER" layoutX="340.0" layoutY="424.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="76.0" prefWidth="160.0" style="-fx-background-color: #FF0000;" styleClass="button_style" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="62.0" layoutY="80.0" prefHeight="36.0" prefWidth="108.0" text="Suma curenta:" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+                                                                  <VBox id="vBox" fx:id="vBox" layoutX="341.0" layoutY="45.0" prefHeight="379.0" prefWidth="160.0" style="-fx-background-color: #000066;">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Depunere" textFill="WHITE" VBox.vgrow="ALWAYS" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Trimite" textFill="WHITE" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Retragere" textFill="WHITE" />
+            <Button id="istoric" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onIstoricClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Istoric" textFill="WHITE" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <Pane fx:id="interfata1" layoutY="195.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="324.0" prefWidth="501.0" style="-fx-background-color: #404040;">
+         <children>
+            <Button fx:id="trimitereCLose1" layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#onRetragereCLose" text="Close" textFill="RED" />
+            <TextField alignment="TOP_CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="68.0" promptText="Ammount" />
+            <Button layoutX="191.0" layoutY="205.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="118.0" text="Retragere">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField alignment="CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="129.0" promptText="PIN" />
+         </children>
+      </Pane>
+
+   </children>
+</AnchorPane>

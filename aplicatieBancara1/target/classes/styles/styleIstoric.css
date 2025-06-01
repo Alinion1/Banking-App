@@ -1,0 +1,60 @@
+/* Stiluri pentru ecranul Istoric */
+
+.istoric-pane {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #4a69bd);
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 1);
+}
+
+.sold-label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+}
+
+.button-back {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-back:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+/* Stiluri pentru ListView */
+.list-view {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1);
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10 5 10 5;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 0 0 1 0;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+/* Puteți adăuga o imagine de fundal dacă doriți */
+/*.istoric-pane {
+    -fx-background-image: url("../images/background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+} */

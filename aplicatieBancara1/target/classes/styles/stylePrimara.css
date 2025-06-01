@@ -1,0 +1,14 @@
+#login{
+    -fx-background-color: #b30000;
+    -fx-text-fill:#ffffff;
+}
+#login:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill:#b30000;
+}
+#pane {
+    -fx-background-image: url("../images/background.jpeg");
+        -fx-background-size: cover;
+        -fx-background-position: center;
+        -fx-background-repeat: no-repeat;
+}
